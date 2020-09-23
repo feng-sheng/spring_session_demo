@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <!-- 给标签赋值 th:text -->
+        <h1 th:text="${userName}"></h1><br>
+        <!-- 给属性赋值 th:value、th:属性名称 -->
+        <input type="text" name="name" th:value="${userName}"><br>
+        <em th:text="${userName}"></em><br>
+        <!-- 字符串拼接,方式1 -->
+        <span th:text="'欢迎'+${userName}+'找我玩'"></span><br>
+        <!-- 字符串拼接,方式2 -->
+        <span th:text="|欢迎${userName}找我玩|"></span><br>
+</body>
+</html>
